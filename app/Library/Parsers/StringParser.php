@@ -76,7 +76,7 @@ class StringParser implements Parser
      */
     private function multiexplode(string $string): void
     {
-        // Explode string with multiple delimiters. 
+        // Explode string with multiple delimiters.
         $ready = preg_replace('/\s+/', ' ', str_replace($this->delimiters, $this->delimiters[0], $string));
         if (is_null($ready) || empty($this->delimiters[0])) {
             throw new \InvalidArgumentException('Invalid input');
