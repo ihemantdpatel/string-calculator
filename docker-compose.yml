@@ -1,0 +1,18 @@
+version: "3.7"
+
+networks:
+  string-calculator.network:
+    driver: bridge
+
+services:
+  web:    
+    build: ./docker/php
+    restart: always
+    tty: true
+    container_name: string-calculator_web
+    networks:
+      - string-calculator.network
+    ports:
+      - "9001:9001"
+    volumes:
+      - .:/var/www/app.dev
