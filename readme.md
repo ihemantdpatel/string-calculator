@@ -21,7 +21,7 @@ Running the following command will stop and remove the containers and networks c
 - `docker compose down` while in the the root of this repository
 
 ### 1. Prepare the Environment
-Install the composer dependencies `docker compose exec web composer install`.  This process will take ~5-10 minutes.
+Install the composer dependencies `docker compose exec web composer install`.  This process will take ~2-5 minutes.
 
 ### 2. Code Style / Linting
 In this project, we try to maintain coding standards following [PSR 12](https://www.php-fig.org/psr/psr-12/).
@@ -30,12 +30,14 @@ You can check for linting errors locally with the following command:
 
 ```bash
 $ docker compose exec web ./vendor/bin/phpcs --standard=PSR12 app/
+$ docker compose exec web ./vendor/bin/phpcs --standard=PSR12 tests/
 ```
 
 Many errors can automatically be fixed and `PHPCS` will let you know that. The command for that is:
 
 ```bash
 $ docker compose exec web ./vendor/bin/phpcbf --standard=PSR12 app/
+$ docker compose exec web ./vendor/bin/phpcbf --standard=PSR12 tests/
 ```
 
 ### 3. Static Analysis Tool

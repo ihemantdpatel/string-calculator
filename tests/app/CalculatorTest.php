@@ -7,7 +7,7 @@ namespace App\Tests;
 use PHPUnit\Framework\TestCase;
 use App\Calculator;
 
-final class CalcTest extends TestCase
+final class CalculatorTest extends TestCase
 {
     /**
      * @test
