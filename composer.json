@@ -14,7 +14,7 @@
     "require-dev": {
         "phpunit/phpunit": "^9.0",
         "squizlabs/php_codesniffer": "4.*",
-        "nunomaduro/larastan": "^2.1"
+        "nunomaduro/larastan": "^2.1"        
     },
     "autoload": {
         "psr-4": {
@@ -35,5 +35,25 @@
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true
+    },
+    "extra": {
+        "hooks": {
+            "config": {
+                "stop-on-failure": ["pre-commit", "pre-push"]
+            },
+            "post-merge": "composer install",
+            "pre-commit": [
+                "echo '                      [PRE-COMMIT HOOKS]'",
+                "echo",
+                "echo",
+                "echo",
+                "docker-compose exec -T web ./scripts/hooks --task lint_php app tests",
+                "echo",
+                "docker-compose exec -T web ./scripts/hooks --task code_sniffer_php_change_only",
+                "echo",
+                "echo",
+                "docker-compose exec -T web ./scripts/hooks --task static_analysis_php"
+            ]
+        }
     }
 }
