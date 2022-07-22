@@ -16,6 +16,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Composer
-        uses: php-actions/composer@v5
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3
+        run: docker-compose run --rm web composer install
+      - name: Test
+        run: docker-compose run --rm web ./vendor/bin/phpunit tests --testdox
