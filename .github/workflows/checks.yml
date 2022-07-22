@@ -15,6 +15,7 @@ jobs:
           password: ${{secrets.DOCKERHUB_TOKEN}}
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Composer
         uses: php-actions/composer@v5
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3        
+        uses: php-actions/phpunit@v3
