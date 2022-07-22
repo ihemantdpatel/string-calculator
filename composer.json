@@ -54,7 +54,9 @@
                 "docker-compose exec -T web ./scripts/hooks --task code_sniffer_php_change_only",
                 "echo",
                 "echo",
-                "docker-compose exec -T web ./scripts/hooks --task static_analysis_php"
+                "docker-compose exec -T web ./scripts/hooks --task static_analysis_php",
+                "echo",
+                "docker-compose exec -T web ./scripts/hooks --task unit_tests_php"
             ]
         }
     },

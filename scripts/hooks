@@ -136,7 +136,7 @@ function lint_php
 function unit_tests_php
 {
   echo "[Task] - Execute Unit Tests (PHP)"
-  ./vendor/bin/phpunit --colors=always
+  ./vendor/bin/phpunit tests --colors=always
   echo "- Unit tests passed. Success! 🏆"
 }
 
