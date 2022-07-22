@@ -15,5 +15,6 @@ jobs:
           password: ${{secrets.DOCKERHUB_TOKEN}}
       - name: Checkout
         uses: actions/checkout@v2
-      - name: Test
-        run: docker-compose run --rm web /var/www/app.dev/vendor/bin/phpunit tests --testdox
+        uses: php-actions/composer@v5
+      - name: PHPUnit Tests
+        uses: php-actions/phpunit@v3        
