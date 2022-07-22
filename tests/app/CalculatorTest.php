@@ -79,7 +79,7 @@ final class CalculatorTest extends TestCase
     public function validStringInputProvider(): array
     {
         return [
-            [2, "1"],                               //Case 1
+            [3, "1"],                               //Case 1
             [3, "1,2"],                             //Case 1
             [9, "1\n,2,1,5"],                       //Case 2.a
             [12, "1,\n3,2,6"],                      //Case 2.b

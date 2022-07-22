@@ -9,12 +9,14 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php": ">=8.1.7"       
+        "php": ">=8.1.7",
+        "symfony/console": "^6.1"
     },
     "require-dev": {
         "phpunit/phpunit": "^9.0",
         "squizlabs/php_codesniffer": "4.*",
-        "nunomaduro/larastan": "^2.1"        
+        "nunomaduro/larastan": "^2.1",
+        "brainmaestro/composer-git-hooks": "*"
     },
     "autoload": {
         "psr-4": {
@@ -55,5 +57,16 @@
                 "docker-compose exec -T web ./scripts/hooks --task static_analysis_php"
             ]
         }
+    },
+    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+        ],
+        "post-root-package-install": [
+        ],
+        "post-create-project-cmd": [
+        ],
+        "post-install-cmd": "vendor/bin/cghooks add --ignore-lock",
+        "post-update-cmd": "vendor/bin/cghooks update"
     }
 }
