@@ -1,3 +1,4 @@
+<a href='https://coveralls.io/github/ihemantdpatel/string-calculator'><img src='https://coveralls.io/repos/github/ihemantdpatel/string-calculator/badge.svg' alt='Coverage Status' /></a>
 ## Running locally 
 
 Pre-requisites

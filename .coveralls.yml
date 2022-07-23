@@ -1,0 +1,6 @@
+# same as Ruby lib
+repo_token: pqv9aa8ajsjajojMDxH5XouwWikhInT5r # should be kept secret!
+service_name: travis-pro # travis-ci or travis-pro
+
+# for php-coveralls
+coverage_clover: ./logs/clover.xml

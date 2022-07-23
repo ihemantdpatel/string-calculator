@@ -16,7 +16,8 @@
         "phpunit/phpunit": "^9.0",
         "squizlabs/php_codesniffer": "4.*",
         "nunomaduro/larastan": "^2.1",
-        "brainmaestro/composer-git-hooks": "*"
+        "brainmaestro/composer-git-hooks": "*",
+        "php-coveralls/php-coveralls": "^2.5"
     },
     "autoload": {
         "psr-4": {
